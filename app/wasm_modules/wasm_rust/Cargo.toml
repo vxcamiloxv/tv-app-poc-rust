@@ -1,0 +1,64 @@
+[package]
+edition = "2018"
+name = "uvn_wasm_rust"
+description = "POC TV rust"
+version = "0.1.2"
+license = "AGPL"
+
+[lib]
+crate-type = ["cdylib", "rlib"]
+
+[features]
+default = ["console_error_panic_hook"]
+# Force openssl-sys to staticly link in the openssl library. Necessary when
+# cross compiling to x86_64-unknown-linux-musl.
+vendored = ["openssl-sys/vendored"]
+
+[dependencies]
+reqwest = { version = "0.11", features = ["json"] }
+futures = {version = "0.3.12", default-features = false}
+serde = { version = "1.0.101", features = ["derive"] }
+serde_derive = "^1.0.59"
+wasm-bindgen = {version = "0.2.51", features = ["serde-serialize"]}
+wasm-bindgen-futures = "0.4.20"
+js-sys = "0.3.47"
+
+# The `console_error_panic_hook` crate provides better debugging of panics by
+# logging them with `console.error`. This is great for development, but requires
+# all the `std::fmt` and `std::panicking` infrastructure, so isn't great for
+# code size when deploying.
+# originally version 0.1.1
+console_error_panic_hook = {version = "0.1.6", optional = true}
+
+# `wee_alloc` is a tiny allocator for wasm that is only ~1K in code size
+# compared to the default allocator's ~10K. It is slower than the default
+# allocator, however.
+#
+# Unfortunately, `wee_alloc` requires nightly Rust when targeting wasm for now.
+wee_alloc = {version = "0.4.2", optional = true}
+
+[dependencies.web-sys]
+features = [
+  'Headers',
+  'Request',
+  'RequestInit',
+  'RequestMode',
+  'Response',
+  'Window',
+  'console',
+]
+version = "0.3.4"
+
+[dev-dependencies]
+wasm-bindgen-test = "0.2"
+cargo-ndk = "2.1.0"
+
+# Dependencies just for android target
+[target.'cfg(target_os="android")'.dependencies]
+jni = { version = "0.5", default-features = false }
+openssl-sys = "*"
+
+[profile.release]
+# Tell `rustc` to optimize for small code size.
+lto = true
+opt-level = "s"

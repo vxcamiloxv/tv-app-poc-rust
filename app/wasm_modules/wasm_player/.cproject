@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?fileVersion 4.0.0?><cproject storage_type_id="org.eclipse.cdt.core.XmlProjectDescriptionStorage">
+	<storageModule moduleId="org.eclipse.cdt.core.settings">
+		<cconfiguration id="org.tizen.web.tv.sec.wasm.builder.toolchain.debug-configuration.1223049238">
+			<storageModule buildSystemId="org.eclipse.cdt.managedbuilder.core.configurationDataProvider" id="org.tizen.web.tv.sec.wasm.builder.toolchain.debug-configuration.1223049238" moduleId="org.eclipse.cdt.core.settings" name="Debug">
+				<externalSettings/>
+				<extensions>
+					<extension id="org.eclipse.cdt.core.GLDErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+					<extension id="org.eclipse.cdt.core.GCCErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+				</extensions>
+			</storageModule>
+			<storageModule moduleId="cdtBuildSystem" version="4.0.0">
+				<configuration artifactName="${ProjName}" buildProperties="org.eclipse.cdt.build.core.buildType=org.eclipse.cdt.build.core.buildType.debug" description="" id="org.tizen.web.tv.sec.wasm.builder.toolchain.debug-configuration.1223049238" name="Debug" parent="org.tizen.web.tv.sec.wasm.builder.toolchain.debug-configuration">
+					<folderInfo id="org.tizen.web.tv.sec.wasm.builder.toolchain.debug-configuration.1223049238." name="/" resourcePath="">
+						<toolChain id="org.tizen.web.tv.sec.wasm.builder.toolchain.debug.toolchain.1244285712" name="Emscripten Toolchain" superClass="org.tizen.web.tv.sec.wasm.builder.toolchain.debug.toolchain">
+							<targetPlatform id="org.tizen.web.tv.sec.wasm.builder.toolchain.debug-configuration.1223049238..1271502981" name=""/>
+							<builder buildPath="${workspace_loc:/wasm_player}/Debug" id="org.tizen.web.tv.sec.wasm.builder.toolchain.base.builder.1982239145" keepEnvironmentInBuildfile="false" managedBuildOn="true" name="Wasm Emscripten Builder" superClass="org.tizen.web.tv.sec.wasm.builder.toolchain.base.builder"/>
+							<tool id="org.tizen.web.tv.sec.wasm.builder.toolchain.base.toolchain.compiler.c.1598211655" name="Emscripten C Compiler" superClass="org.tizen.web.tv.sec.wasm.builder.toolchain.base.toolchain.compiler.c">
+								<option defaultValue="org.tizen.web.tv.sec.wasm.builder.compiler.base.optimization.level.none" id="org.tizen.web.tv.sec.wasm.builder.compiler.base.option.optimization.level.96740123" name="Optimization Level" superClass="org.tizen.web.tv.sec.wasm.builder.compiler.base.option.optimization.level" useByScannerDiscovery="false" valueType="enumerated"/>
+								<option defaultValue="org.tizen.web.tv.sec.wasm.builder.compiler.base.debugging.level.g4" id="org.tizen.web.tv.sec.wasm.builder.compiler.base.option.debugging.level.1587492065" name="Debug Level" superClass="org.tizen.web.tv.sec.wasm.builder.compiler.base.option.debugging.level" useByScannerDiscovery="false" valueType="enumerated"/>
+								<inputType id="org.tizen.web.tv.sec.wasm.builder.compiler.c.input.1642623906" superClass="org.tizen.web.tv.sec.wasm.builder.compiler.c.input"/>
+							</tool>
+							<tool id="org.tizen.web.tv.sec.wasm.builder.toolchain.base.toolchain.compiler.cpp.1914476323" name="Emscripten C++ Compiler" superClass="org.tizen.web.tv.sec.wasm.builder.toolchain.base.toolchain.compiler.cpp">
+								<option defaultValue="org.tizen.web.tv.sec.wasm.builder.compiler.base.optimization.level.none" id="org.tizen.web.tv.sec.wasm.builder.compiler.base.option.optimization.level.540308392" name="Optimization Level" superClass="org.tizen.web.tv.sec.wasm.builder.compiler.base.option.optimization.level" useByScannerDiscovery="false" valueType="enumerated"/>
+								<option defaultValue="org.tizen.web.tv.sec.wasm.builder.compiler.base.debugging.level.g4" id="org.tizen.web.tv.sec.wasm.builder.compiler.base.option.debugging.level.1893984193" name="Debug Level" superClass="org.tizen.web.tv.sec.wasm.builder.compiler.base.option.debugging.level" useByScannerDiscovery="false" valueType="enumerated"/>
+								<option id="org.tizen.web.tv.sec.wasm.builder.compiler.cpp.option.misc.other.1668080831" name="Other flags" superClass="org.tizen.web.tv.sec.wasm.builder.compiler.cpp.option.misc.other" useByScannerDiscovery="false" value="-c -fmessage-length=0  -I../inc -Wall -g4 -std=gnu++14 --bind" valueType="string"/>
+								<inputType id="org.tizen.web.tv.sec.wasm.builder.compiler.cpp.input.1764753640" superClass="org.tizen.web.tv.sec.wasm.builder.compiler.cpp.input"/>
+							</tool>
+							<tool id="org.tizen.web.tv.sec.wasm.builder.toolchain.base.toolchain.linker.c.496240047" name="Emscripten C Linker" superClass="org.tizen.web.tv.sec.wasm.builder.toolchain.base.toolchain.linker.c">
+								<option id="gnu.c.link.option.ldflags.1309730894" name="Linker flags" superClass="gnu.c.link.option.ldflags" value="  -s EXPORT_NAME=wasm_player -s MODULARIZE=1 -s WASM=1 -g4 --bind" valueType="string"/>
+							</tool>
+							<tool id="org.tizen.web.tv.sec.wasm.builder.toolchain.base.toolchain.linker.cpp.743993369" name="Emscripten C++ Linker" superClass="org.tizen.web.tv.sec.wasm.builder.toolchain.base.toolchain.linker.cpp">
+								<option id="gnu.cpp.link.option.flags.1567452023" name="Linker flags" superClass="gnu.cpp.link.option.flags" useByScannerDiscovery="false" value=" -s WASM=1 -g4 --bind -s ENVIRONMENT_MAY_BE_TIZEN -pthread -s USE_PTHREADS=1 -s PTHREAD_POOL_SIZE=1" valueType="string"/>
+								<inputType id="cdt.managedbuild.tool.gnu.cpp.linker.input.1724391140" superClass="cdt.managedbuild.tool.gnu.cpp.linker.input">
+									<additionalInput kind="additionalinputdependency" paths="$(USER_OBJS)"/>
+									<additionalInput kind="additionalinput" paths="$(LIBS)"/>
+								</inputType>
+							</tool>
+						</toolChain>
+					</folderInfo>
+				</configuration>
+			</storageModule>
+			<storageModule moduleId="org.eclipse.cdt.core.externalSettings"/>
+		</cconfiguration>
+		<cconfiguration id="org.tizen.web.tv.sec.wasm.builder.toolchain.release-configuration.2116997579">
+			<storageModule buildSystemId="org.eclipse.cdt.managedbuilder.core.configurationDataProvider" id="org.tizen.web.tv.sec.wasm.builder.toolchain.release-configuration.2116997579" moduleId="org.eclipse.cdt.core.settings" name="Release">
+				<externalSettings/>
+				<extensions>
+					<extension id="org.eclipse.cdt.core.GLDErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+					<extension id="org.eclipse.cdt.core.GCCErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+				</extensions>
+			</storageModule>
+			<storageModule moduleId="cdtBuildSystem" version="4.0.0">
+				<configuration artifactName="${ProjName}" buildProperties="org.eclipse.cdt.build.core.buildType=org.eclipse.cdt.build.core.buildType.release" description="" id="org.tizen.web.tv.sec.wasm.builder.toolchain.release-configuration.2116997579" name="Release" parent="org.tizen.web.tv.sec.wasm.builder.toolchain.release-configuration">
+					<folderInfo id="org.tizen.web.tv.sec.wasm.builder.toolchain.release-configuration.2116997579." name="/" resourcePath="">
+						<toolChain id="org.tizen.web.tv.sec.wasm.builder.toolchain.release.toolchain.1121138647" name="Emscripten Toolchain" superClass="org.tizen.web.tv.sec.wasm.builder.toolchain.release.toolchain">
+							<targetPlatform id="org.tizen.web.tv.sec.wasm.builder.toolchain.release-configuration.2116997579..268574074" name=""/>
+							<builder buildPath="${workspace_loc:/wasm_player}/Release" id="org.tizen.web.tv.sec.wasm.builder.toolchain.base.builder.1610169701" keepEnvironmentInBuildfile="false" managedBuildOn="true" name="Wasm Emscripten Builder" superClass="org.tizen.web.tv.sec.wasm.builder.toolchain.base.builder"/>
+							<tool id="org.tizen.web.tv.sec.wasm.builder.toolchain.base.toolchain.compiler.c.853479800" name="Emscripten C Compiler" superClass="org.tizen.web.tv.sec.wasm.builder.toolchain.base.toolchain.compiler.c">
+								<option defaultValue="org.tizen.web.tv.sec.wasm.builder.compiler.base.optimization.levelZ" id="org.tizen.web.tv.sec.wasm.builder.compiler.base.option.optimization.level.575994019" name="Optimization Level" superClass="org.tizen.web.tv.sec.wasm.builder.compiler.base.option.optimization.level" useByScannerDiscovery="false" valueType="enumerated"/>
+								<option defaultValue="org.tizen.web.tv.sec.wasm.builder.compiler.base.debugging.level.none" id="org.tizen.web.tv.sec.wasm.builder.compiler.base.option.debugging.level.1155274728" name="Debug Level" superClass="org.tizen.web.tv.sec.wasm.builder.compiler.base.option.debugging.level" useByScannerDiscovery="false" valueType="enumerated"/>
+								<inputType id="org.tizen.web.tv.sec.wasm.builder.compiler.c.input.1654759334" superClass="org.tizen.web.tv.sec.wasm.builder.compiler.c.input"/>
+							</tool>
+							<tool id="org.tizen.web.tv.sec.wasm.builder.toolchain.base.toolchain.compiler.cpp.137335874" name="Emscripten C++ Compiler" superClass="org.tizen.web.tv.sec.wasm.builder.toolchain.base.toolchain.compiler.cpp">
+								<option defaultValue="org.tizen.web.tv.sec.wasm.builder.compiler.base.optimization.levelZ" id="org.tizen.web.tv.sec.wasm.builder.compiler.base.option.optimization.level.907946523" name="Optimization Level" superClass="org.tizen.web.tv.sec.wasm.builder.compiler.base.option.optimization.level" useByScannerDiscovery="false" valueType="enumerated"/>
+								<option defaultValue="org.tizen.web.tv.sec.wasm.builder.compiler.base.debugging.level.none" id="org.tizen.web.tv.sec.wasm.builder.compiler.base.option.debugging.level.510536690" name="Debug Level" superClass="org.tizen.web.tv.sec.wasm.builder.compiler.base.option.debugging.level" useByScannerDiscovery="false" valueType="enumerated"/>
+								<option id="org.tizen.web.tv.sec.wasm.builder.compiler.cpp.option.misc.other.54351827" name="Other flags" superClass="org.tizen.web.tv.sec.wasm.builder.compiler.cpp.option.misc.other" useByScannerDiscovery="false" value="-c -fmessage-length=0  -O3 -I../inc -Wall -std=gnu++11 --bind" valueType="string"/>
+								<inputType id="org.tizen.web.tv.sec.wasm.builder.compiler.cpp.input.600040053" superClass="org.tizen.web.tv.sec.wasm.builder.compiler.cpp.input"/>
+							</tool>
+							<tool id="org.tizen.web.tv.sec.wasm.builder.toolchain.base.toolchain.linker.c.1250514334" name="Emscripten C Linker" superClass="org.tizen.web.tv.sec.wasm.builder.toolchain.base.toolchain.linker.c">
+								<option id="gnu.c.link.option.ldflags.1017861544" name="Linker flags" superClass="gnu.c.link.option.ldflags" value="  -s EXPORT_NAME=wasm_player -O3 -s MODULARIZE=1 -s WASM=1 --bind" valueType="string"/>
+							</tool>
+							<tool id="org.tizen.web.tv.sec.wasm.builder.toolchain.base.toolchain.linker.cpp.1801479577" name="Emscripten C++ Linker" superClass="org.tizen.web.tv.sec.wasm.builder.toolchain.base.toolchain.linker.cpp">
+								<option id="gnu.cpp.link.option.flags.959142976" name="Linker flags" superClass="gnu.cpp.link.option.flags" value="  -s EXPORT_NAME=wasm_player -O3 -s MODULARIZE=1 -s WASM=1 --bind" valueType="string"/>
+								<inputType id="cdt.managedbuild.tool.gnu.cpp.linker.input.699731145" superClass="cdt.managedbuild.tool.gnu.cpp.linker.input">
+									<additionalInput kind="additionalinputdependency" paths="$(USER_OBJS)"/>
+									<additionalInput kind="additionalinput" paths="$(LIBS)"/>
+								</inputType>
+							</tool>
+						</toolChain>
+					</folderInfo>
+				</configuration>
+			</storageModule>
+			<storageModule moduleId="org.eclipse.cdt.core.externalSettings"/>
+		</cconfiguration>
+	</storageModule>
+	<storageModule moduleId="cdtBuildSystem" version="4.0.0">
+		<project id="wasm_player.org.tizen.web.tv.sec.wasm.builder.toolchain.2094757905" name="WASM Project" projectType="org.tizen.web.tv.sec.wasm.builder.toolchain"/>
+	</storageModule>
+	<storageModule moduleId="scannerConfiguration">
+		<autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId=""/>
+		<scannerConfigBuildInfo instanceId="org.tizen.web.tv.sec.wasm.builder.toolchain.debug-configuration.1223049238;org.tizen.web.tv.sec.wasm.builder.toolchain.debug-configuration.1223049238.;org.tizen.web.tv.sec.wasm.builder.toolchain.base.toolchain.compiler.c.1598211655;org.tizen.web.tv.sec.wasm.builder.compiler.c.input.1642623906">
+			<autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId=""/>
+		</scannerConfigBuildInfo>
+		<scannerConfigBuildInfo instanceId="org.tizen.web.tv.sec.wasm.builder.toolchain.release-configuration.2116997579;org.tizen.web.tv.sec.wasm.builder.toolchain.release-configuration.2116997579.;org.tizen.web.tv.sec.wasm.builder.toolchain.base.toolchain.compiler.c.853479800;org.tizen.web.tv.sec.wasm.builder.compiler.c.input.1654759334">
+			<autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId=""/>
+		</scannerConfigBuildInfo>
+		<scannerConfigBuildInfo instanceId="org.tizen.web.tv.sec.wasm.builder.toolchain.release-configuration.2116997579;org.tizen.web.tv.sec.wasm.builder.toolchain.release-configuration.2116997579.;org.tizen.web.tv.sec.wasm.builder.toolchain.base.toolchain.compiler.cpp.137335874;org.tizen.web.tv.sec.wasm.builder.compiler.cpp.input.600040053">
+			<autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId=""/>
+		</scannerConfigBuildInfo>
+		<scannerConfigBuildInfo instanceId="org.tizen.web.tv.sec.wasm.builder.toolchain.debug-configuration.1223049238;org.tizen.web.tv.sec.wasm.builder.toolchain.debug-configuration.1223049238.;org.tizen.web.tv.sec.wasm.builder.toolchain.base.toolchain.compiler.cpp.1914476323;org.tizen.web.tv.sec.wasm.builder.compiler.cpp.input.1764753640">
+			<autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId=""/>
+		</scannerConfigBuildInfo>
+	</storageModule>
+	<storageModule moduleId="org.eclipse.cdt.core.LanguageSettingsProviders"/>
+	<storageModule moduleId="refreshScope" versionNumber="2">
+		<configuration configurationName="Debug">
+			<resource resourceType="PROJECT" workspacePath="/wasm_player"/>
+		</configuration>
+		<configuration configurationName="Release">
+			<resource resourceType="PROJECT" workspacePath="/wasm_player"/>
+		</configuration>
+	</storageModule>
+	<storageModule moduleId="org.eclipse.cdt.make.core.buildtargets"/>
+</cproject>

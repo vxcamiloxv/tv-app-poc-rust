@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<projectDescription>
+	<name>tvApp</name>
+	<comment></comment>
+	<projects>
+		<project>wasm_player</project>
+	</projects>
+	<buildSpec>
+		<buildCommand>
+			<name>json.validation.builder</name>
+			<arguments>
+			</arguments>
+		</buildCommand>
+		<buildCommand>
+			<name>org.tizen.web.project.builder.WebBuilder</name>
+			<arguments>
+			</arguments>
+		</buildCommand>
+	</buildSpec>
+	<natures>
+		<nature>json.validation.nature</nature>
+		<nature>org.eclipse.wst.jsdt.core.jsNature</nature>
+		<nature>org.tizen.web.project.builder.WebNature</nature>
+		<nature>org.tizen.web.tv.sec.wasm.common.plugin.TizenProjectWasmNature</nature>
+	</natures>
+</projectDescription>

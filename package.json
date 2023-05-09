@@ -1,0 +1,34 @@
+{
+  "name": "tv-app-poc",
+  "version": "0.0.1",
+  "description": "TV app POC with web-assembly ",
+  "main": "index.js",
+  "scripts": {
+    "build": "cross-env NODE_ENV=production npm run build:app",
+    "build:app": "webpack",
+    "build:wasm": "cd  app/wasm_modules/wasm_rust && wasm-pack build --out-name index",
+    "build:jni": "cd  app/wasm_modules/wasm_rust && cargo ndk -t x86 -o ../../../rustandroid/app/src/main/jniLibs build --release --features vendored",
+    "dev": "webpack-dev-server --content-base app",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "webassembly"
+  ],
+  "license": "AGPL",
+  "devDependencies": {
+    "@wasm-tool/wasm-pack-plugin": "^1.3.1",
+    "cross-env": "^5.2.0",
+    "css-loader": "^2.1.1",
+    "eslint": "^7.17.0",
+    "mini-css-extract-plugin": "^0.6.0",
+    "serve": "^11.0.0",
+    "style-loader": "^0.23.1",
+    "svelte": "^3.0.0",
+    "svelte-loader": "2.13.3",
+    "wasm-pack": "^0.9.1",
+    "webpack": "^4.30.0",
+    "webpack-cli": "^3.3.0",
+    "webpack-dev-server": "^3.3.1"
+  },
+  "dependencies": {}
+}

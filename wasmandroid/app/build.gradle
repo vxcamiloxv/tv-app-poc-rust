@@ -1,0 +1,53 @@
+plugins {
+    id 'com.android.application'
+    id 'kotlin-android'
+}
+
+android {
+    compileSdkVersion 30
+    buildToolsVersion "30.0.3"
+
+    defaultConfig {
+        applicationId "com.example.wasmandroid"
+        minSdkVersion 26
+        targetSdkVersion 30
+        versionCode 1
+        versionName "1.0"
+
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+task cleanAssets(type: Delete) {
+  delete 'src/main/assets/www/'
+}
+preBuild.dependsOn cleanAssets
+
+task copyAssets(type: Copy) {
+    from '../../app'
+    into 'src/main/assets/www'
+    include "**/*.js"
+    include "**/*.css"
+    include "**/*.html"
+    include "**/*.wasm"
+    include "**/*.png"
+    include "**/*.svg"
+}
+copyAssets.dependsOn cleanAssets
+preBuild.dependsOn copyAssets
+
+dependencies {
+
+    implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
+    implementation 'androidx.core:core-ktx:1.2.0'
+    implementation 'androidx.leanback:leanback:1.0.0'
+    implementation 'androidx.appcompat:appcompat:1.1.0'
+    implementation 'com.github.bumptech.glide:glide:3.8.0'
+    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
+}
