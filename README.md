@@ -4,7 +4,7 @@ Rust TV POC for Tech Talk, here is an example of how use Rust to have the
 main logic an compile to web-assembly or native code (JNI) for use
 with Andorid NDK.
 
-This was a POC created with such great team member
+This was a POC created with such great team members
 [@almahirpm](https://github.com/almahirpm), Yaser, Arturo
 
 # Requirements
